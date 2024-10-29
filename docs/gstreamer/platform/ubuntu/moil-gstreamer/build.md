@@ -3,6 +3,8 @@ sidebar_position: 1
 ---
 # 3.2.1 Build
 
+This section will guide you on how to build the MOIL GStreamer Plugin on Ubuntu.
+
 1. Get and Set up the moildev library
 2. Clone gst-plugins-bad repository
 3. Build MOIL GStreamer Plugin
