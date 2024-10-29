@@ -35,12 +35,44 @@ Example output:
 [Intel® Processor N200](https://www.intel.com/content/www/us/en/products/sku/231804/intel-processor-n200-6m-cache-up-to-3-70-ghz/specifications.html)  
 [Intel® Core™ i5-1135G7 Processor](https://www.intel.com/content/www/us/en/products/sku/208658/intel-core-i51135g7-processor-8m-cache-up-to-4-20-ghz/specifications.html)
 
-## UUtility Tools Installation
+### Install the Intel Graphics Driver
+
+Install the Intel graphics GPG public key
+
+```bash
+wget -qO - https://repositories.intel.com/gpu/intel-graphics.key | sudo gpg --yes --dearmor --output /usr/share/keyrings/intel-graphics.gpg
+```
+
+Configure the repositories.intel.com package repository
+
+```bash
+echo "deb [arch=amd64,i386 signed-by=/usr/share/keyrings/intel-graphics.gpg] https://repositories.intel.com/gpu/ubuntu jammy client" | sudo tee /etc/apt/sources.list.d/intel-gpu-jammy.list
+```
+
+Update the package repository meta-data
+
+```bash
+sudo apt update
+```
+
+Install packages responsible for computing and media runtimes.
+
+```bash
+sudo apt install intel-media-va-driver-non-free libmfx1 libmfxgen1 libvpl2 libegl-mesa0 libegl1-mesa libegl1-mesa-dev libgbm1 libgl1-mesa-dev libgl1-mesa-dri libglapi-mesa libgles2-mesa-dev libglx-mesa0 libigdgmm12 libxatracker2 mesa-va-drivers mesa-vdpau-drivers mesa-vulkan-drivers va-driver-all
+```
+
+## Utility Tools Installation
 
 V4L2 Utility Tools Installation
 
 ```bash
 sudo apt install qv4l2 v4l-utils
+```
+
+Hardware Information Tools Installation
+
+```bash
+sudo apt install hwinfo vainfo mesa-utils
 ```
 
 ## Development Package Installation
