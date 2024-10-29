@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
-# 3.2 Setup
+# 3.3 Setup System
 
 Configure the Git name and email address.
 

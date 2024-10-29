@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 3.1 Package Installation
+# 3.1 Installation
 
 ## Driver Installation
 
