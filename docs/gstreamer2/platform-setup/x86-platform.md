@@ -44,6 +44,12 @@ Install packages responsible for computing and media runtimes.
 sudo apt install intel-opencl-icd intel-level-zero-gpu level-zero intel-media-va-driver-non-free libmfx1 libmfxgen1 libvpl2 libegl-mesa0 libegl1-mesa libegl1-mesa-dev libgbm1 libgl1-mesa-dev libgl1-mesa-dri libglapi-mesa libgles2-mesa-dev libglx-mesa0 libigdgmm12 libxatracker2 mesa-va-drivers mesa-vdpau-drivers mesa-vulkan-drivers va-driver-all vainfo hwinfo clinfo mesa-utils
 ```
 
+### v4l2 tools (Camera)
+
+```bash
+sudo apt install qv4l2 v4l-utils
+```
+
 ### Git & Git LFS
 
 ```bash
@@ -54,10 +60,10 @@ sudo apt update
 sudo apt install git git-lfs
 ```
 
-### v4l2 tools (Camera)
+### Development Tools
 
 ```bash
-sudo apt install qv4l2 v4l-utils
+sudo apt install make cmake meson ninja-build pkg-config build-essential
 ```
 
 ## 2.1.4 Environment Setup
