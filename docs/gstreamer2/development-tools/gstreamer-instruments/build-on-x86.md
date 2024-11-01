@@ -36,8 +36,11 @@ meson compile -C builddir
 Install the project:
 
 ```bash
-meson install -C builddir
+sudo meson install -C builddir
 ```
 
-## Usage
+Set the `GST_PLUGIN_PATH` environment variable:
 
+```bash
+export GST_PLUGIN_PATH="/usr/local/lib/x86_64-linux-gnu/gstreamer-1.0/:$GST_PLUGIN_PATH"
+```
