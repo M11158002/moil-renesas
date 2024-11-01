@@ -38,4 +38,3 @@ Install the project:
 ```bash
 sudo meson install -C builddir
 ```
-
