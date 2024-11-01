@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 # 4.2.3 Usage Guide
 
-## Usage GStreamer ABI call interception
+## Use GStreamer API calls interception
 
 Set the `LD_PRELOAD` environment variable
 
@@ -17,7 +17,7 @@ Set the `GST_DEBUG_DUMP_TRACE_DIR` environment variable
 export GST_DEBUG_DUMP_TRACE_DIR="$HOME/workspace/tmp/gst-trace"
 ```
 
-## Usage Hook with GStreamer Plugin
+## Use GStreamer Plugin
 
 Set the `GST_PLUGIN_PATH` environment variable
 
