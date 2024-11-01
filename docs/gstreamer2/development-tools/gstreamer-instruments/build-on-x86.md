@@ -39,8 +39,3 @@ Install the project:
 sudo meson install -C builddir
 ```
 
-Set the `GST_PLUGIN_PATH` environment variable:
-
-```bash
-export GST_PLUGIN_PATH="/usr/local/lib/x86_64-linux-gnu/gstreamer-1.0/:$GST_PLUGIN_PATH"
-```
