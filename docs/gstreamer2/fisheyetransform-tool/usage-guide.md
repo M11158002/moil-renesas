@@ -3,11 +3,28 @@ sidebar_position: 3
 ---
 # 5.3 Usage Guide
 
-## Create a your camera configuration file
+## Supported map types and parameters
 
-Create a YAML file with the camera configuration. The file should have the following format:
+- AnyPointM1
+  - alpha_offset
+  - beta_offset
+  - zoom
+- AnyPointM2
+  - thetaX_degree
+  - thetaY_degree
+  - zoom
+- PanoramaM_Rt
+  - alpha_max
+  - ic_alpha_degree
+  - ic_beta_degree
 
-```yaml
+## Example
+
+Create a YAML file:
+
+Configure the camera parameters:
+
+```yaml title="config.yaml"
 camera:
   name: 7730v1
   sensor:
@@ -27,4 +44,27 @@ camera:
     - 35.661
     - -13.097
     - 370.136
+```
+
+Configure the image path:
+
+```yaml title="config.yaml"
+image_path: /path/to/image.jpg
+```
+
+Configure the map parameters:
+
+```yaml title="config.yaml"
+  - name: anypoint
+    save_path: output/anypoint
+    type: AnyPointM2
+    alpha_offset: 0.0
+    beta_offset: 0.0
+    zoom: 1.0
+```
+
+Run the fisheye transform tool:
+
+```bash
+./fisheye_transformer -c config.yaml
 ```
