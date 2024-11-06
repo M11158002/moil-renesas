@@ -10,16 +10,44 @@ sidebar_position: 1
 
 Read data from a file in the local file system.
 
-```bash
+Basic pipeline
 
+```bash
+gst-launch-1.0 filesrc location=video.mp4 ! qtdemux ! h264parse ! avdec_h264 ! videoconvert ! autovideosink
+```
+
+VA-API hardware acceleration pipeline
+
+```bash
+gst-launch-1.0 filesrc location=video.mp4 ! qtdemux ! h264parse ! vaapih264dec ! vaapipostproc ! autovideosink
+```
+
+OpenMAX hardware acceleration pipeline
+
+```bash
+gst-launch-1.0 filesrc location=video.mp4 ! qtdemux ! h264parse ! omxh264dec ! videoconvert ! autovideosink
 ```
 
 ### [filesink](https://gstreamer.freedesktop.org/documentation/coreelements/filesink.html?gi-language=c)
 
 Write incoming data to a file in the local file system.
 
-```bash
+Basic pipeline
 
+```bash
+gst-launch-1.0 videotestsrc ! videoconvert ! x264enc ! h264parse ! mp4mux ! filesink location=output.mp4
+```
+
+VA-API hardware acceleration pipeline
+
+```bash
+gst-launch-1.0 videotestsrc ! vaapipostproc ! vaapih264enc ! h264parse ! mp4mux ! filesink location=output.mp4
+```
+
+OpenMAX hardware acceleration pipeline
+
+```bash
+gst-launch-1.0 videotestsrc ! videoconvert ! omxh264enc ! h264parse ! mp4mux ! filesink location=output.mp4
 ```
 
 ## Network Elements
