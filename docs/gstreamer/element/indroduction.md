@@ -88,7 +88,7 @@ This element crops video frames, meaning it can remove parts of the picture on t
 
 ### [videotestsrc](https://gstreamer.freedesktop.org/documentation/videotestsrc/index.html?gi-language=c)
 
-The videotestsrc element is used to produce test video data in a wide variety of formats. The video test data produced can be controlled with the "pattern" property.
+The videotestsrc element is used to produce test video data in a wide variety of formats. The video test data produced can be controlled with the "pattern" property.  
 By default the videotestsrc will generate data indefinitely, but if the num-buffers property is non-zero it will instead generate a fixed number of video frames and then send EOS.
 
 ```bash
@@ -98,6 +98,28 @@ By default the videotestsrc will generate data indefinitely, but if the num-buff
 ### [audiotestsrc](https://gstreamer.freedesktop.org/documentation/audiotestsrc/index.html?gi-language=c)
 
 AudioTestSrc can be used to generate basic audio signals. It support several different waveforms and allows to set the base frequency and volume. Some waveforms might use additional properties.
+
+```bash
+
+```
+
+## Multithreading Elements
+
+### [queue](https://gstreamer.freedesktop.org/documentation/coreelements/queue.html?gi-language=c)
+
+Data is queued until one of the limits specified by the max-size-buffers, max-size-bytes and/or max-size-time properties has been reached. Any attempt to push more buffers into the queue will block the pushing thread until more space becomes available.
+
+The queue will create a new thread on the source pad to decouple the processing on sink and source pad.
+
+```bash
+
+```
+
+### [tee](https://gstreamer.freedesktop.org/documentation/coreelements/tee.html?gi-language=c)
+
+Split data to multiple pads. Branching the data flow is useful when e.g. capturing a video where the video is shown on the screen and also encoded and written to a file. Another example is playing music and hooking up a visualisation module.
+
+One needs to use separate queue elements (or a multiqueue) in each branch to provide separate threads for each branch. Otherwise a blocked dataflow in one branch would stall the other branches.
 
 ```bash
 
