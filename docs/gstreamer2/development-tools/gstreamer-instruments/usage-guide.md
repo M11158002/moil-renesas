@@ -8,7 +8,7 @@ sidebar_position: 3
 Set the `LD_PRELOAD` environment variable
 
 ```bash
-export LD_PRELOAD="/usr/local/lib/x86_64-linux-gnu/libgsttracer.so:$LD_PRELOAD"
+export LD_PRELOAD="/usr/local/lib/x86_64-linux-gnu/libgstintercept.so:$LD_PRELOAD"
 ```
 
 Set the `GST_DEBUG_DUMP_TRACE_DIR` environment variable
