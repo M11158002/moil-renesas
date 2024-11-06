@@ -124,3 +124,39 @@ One needs to use separate queue elements (or a multiqueue) in each branch to pro
 ```bash
 
 ```
+
+## Capabilities Elements
+
+### [capsfilter](https://gstreamer.freedesktop.org/documentation/coreelements/capsfilter.html?gi-language=c)
+
+The element does not modify data as such, but can enforce limitations on the data format.
+
+```bash
+
+```
+
+## Debugging Elements
+
+### [fakesink](https://gstreamer.freedesktop.org/documentation/coreelements/fakesink.html?gi-language=c)
+
+Dummy sink that swallows everything.
+
+```bash
+
+```
+
+### [fakevideosink](https://gstreamer.freedesktop.org/documentation/debugutilsbad/fakevideosink.html?gi-language=c)
+
+This element is the same as fakesink but will pretend to support various allocation meta API like GstVideoMeta in order to prevent memory copies. This is useful for throughput testing and testing zero-copy path while creating a new pipeline.
+
+```bash
+
+```
+
+### [fpsdisplaysink](https://gstreamer.freedesktop.org/documentation/debugutilsbad/fpsdisplaysink.html?gi-language=c)
+
+Can display the current and average framerate as a testoverlay or on stdout.
+
+```bash
+
+```
