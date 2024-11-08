@@ -4,13 +4,11 @@
 
 ### 1. 課程簡介與開發環境概述 (30分鐘)
 
-- Moil 專案介紹
+- MOIL Introduction
 - 開發環境架構說明
 - 課程學習路徑說明
 
 ### 2. Linux 基礎與 Ubuntu Server (1小時)
-
-ubuntu
 
 - Ubuntu 22.04 Server 安裝與配置
 - 基礎 Linux 指令操作
@@ -23,19 +21,16 @@ ubuntu
 
 ### 3. 容器技術基礎 - Docker (1小時)
 
-docker
-
 - Docker 架構介紹
 - Docker 安裝與配置
 - Docker 容器管理
 - 實作練習與故障排除
 
 [Install Docker Engine](https://docs.docker.com/engine/install/ubuntu/)  
-[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
+[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)  
+[Running containers](https://docs.docker.com/engine/containers/run/)
 
 ### 4. Windows Subsystem for Linux (1小時)
-
-wsl
 
 - WSL 2 架構介紹
 - WSL 安裝與配置
@@ -44,12 +39,10 @@ wsl
 
 [How to install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)  
 [Advanced settings configuration in WSL](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)  
-[Accessing network applications with WSL](https://learn.microsoft.com/en-us/windows/wsl/networking)
+[Accessing network applications with WSL](https://learn.microsoft.com/en-us/windows/wsl/networking)  
+[D3D12 GPU Video acceleration in the Windows Subsystem for Linux now available!](https://devblogs.microsoft.com/commandline/d3d12-gpu-video-acceleration-in-the-windows-subsystem-for-linux-now-available/)
 
 ### 5. 開發工具配置 (30分鐘)
-
-git
-vscode
 
 - VSCode 安裝與配置
 - VSCode 遠端開發配置
@@ -58,6 +51,7 @@ vscode
   - Docker 容器開發
 - Git 與 GitHub 基礎操作
 
+[Git](https://git-scm.com/)
 [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  
 [VS Code Remote Development](https://code.visualstudio.com/docs/remote/remote-overview)  
 [Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
@@ -66,15 +60,12 @@ vscode
 
 ### 6. 技術文件開發與管理
 
-fnm
-nodejs npm
-github actions ci/cd
-
 - Docusaurus 安裝與配置
 - Markdown 語法基礎
 - 文件部署與維護
 - 實作練習與故障排除
 
+[Node.js Install](https://nodejs.org/en/download/package-manager/)  
 [Installation](https://docusaurus.io/docs/installation)  
 [Configuration](https://docusaurus.io/docs/configuration)  
 [Docusaurus Guides](https://docusaurus.io/docs/category/guides)  
@@ -83,12 +74,6 @@ github actions ci/cd
 ## 第三部分：嵌入式系統開發 (10小時)
 
 ### 7. Yocto 客製化 Linux 系統 (7.5小時)
-
-linux command
-docker
-
-vscode
-balenaEtcher
 
 - Yocto 開發環境建置 (45分鐘)
   - 容器環境配置
@@ -105,7 +90,8 @@ balenaEtcher
 [RZ/G2L-EVKIT](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evkit-evaluation-board-kit-rzg2l-mpu)  
 [RZ/G2L Evaluation Board Kit Quick Start Guide](https://www.renesas.com/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686)  
 [RZ/G Verified Linux Package](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-linux-platform/rzg-marketplace/verified-linux-package/rzg-verified-linux-package)  
-[Renesas Wiki](https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki)
+[Renesas Wiki](https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki)  
+[balenaEtcher](https://etcher.balena.io/)
 
 ### 8. 多媒體應用開發 - GStreamer (4小時)
 
