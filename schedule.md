@@ -17,7 +17,9 @@ ubuntu
 - 實作練習與故障排除
 
 [Install Ubuntu Server](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview)  
+[Create a Bootable USB stick](https://ubuntu.com/tutorials/install-ubuntu-desktop#3-create-a-bootable-usb-stick)
 [OpenSSH Server](https://documentation.ubuntu.com/server/how-to/security/openssh-server/)
+[Taiwan Mirror](https://mirror.twds.com.tw/)
 
 ### 3. 容器技術基礎 - Docker (1小時)
 
@@ -73,6 +75,11 @@ github actions ci/cd
 - 文件部署與維護
 - 實作練習與故障排除
 
+[Installation](https://docusaurus.io/docs/installation)  
+[Configuration](https://docusaurus.io/docs/configuration)  
+[Docusaurus Guides](https://docusaurus.io/docs/category/guides)  
+[Deployment](https://docusaurus.io/docs/deployment)
+
 ## 第三部分：嵌入式系統開發 (10小時)
 
 ### 7. Yocto 客製化 Linux 系統 (7.5小時)
@@ -94,6 +101,12 @@ balenaEtcher
   - SD 卡燒錄
   - 系統啟動與測試
 
+[Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)  
+[RZ/G2L-EVKIT](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evkit-evaluation-board-kit-rzg2l-mpu)  
+[RZ/G2L Evaluation Board Kit Quick Start Guide](https://www.renesas.com/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686)  
+[RZ/G Verified Linux Package](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-linux-platform/rzg-marketplace/verified-linux-package/rzg-verified-linux-package)  
+[Renesas Wiki](https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki)
+
 ### 8. 多媒體應用開發 - GStreamer (4小時)
 
 yocto
@@ -106,6 +119,11 @@ yocto
   - 效能優化
   - 故障排除
 
+[Installing GStreamer](https://gstreamer.freedesktop.org/documentation/installing/index.html?gi-language=c)  
+[Basic tutorials](https://gstreamer.freedesktop.org/documentation/tutorials/basic/index.html?gi-language=c)  
+[Plugins](https://gstreamer.freedesktop.org/documentation/plugins_doc.html?gi-language=c)  
+[Renesas Wiki GStreamer](https://jira-gasg.renesas.eu/confluence/display/REN/GStreamer)
+
 ### 9. 使用者介面開發 - Qt (3小時)
 
 yocto
@@ -113,6 +131,8 @@ yocto
 - Qt 開發環境建置 (1小時)
 - Qt 程式開發 (1小時)
 - RZ/G2L Qt 程式開發 (1小時)
+
+[Renesas Wiki Qt](https://jira-gasg.renesas.eu/confluence/display/REN/Graphics)
 
 ### 10. 硬體控制開發 - GPIO (3小時)
 
@@ -122,6 +142,8 @@ yocto
 - 開發環境準備 (1小時)
 - Qt GPIO 程式開發 (1小時)
 - RZ/G2L GPIO 程式開發 (1小時)
+
+[Renesas Wiki Kernel GPIO](https://jira-gasg.renesas.eu/confluence/display/REN/Kernel)
 
 ## 建議的先修知識
 
