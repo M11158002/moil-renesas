@@ -10,23 +10,39 @@
 
 ### 2. Linux 基礎與 Ubuntu Server (1小時)
 
+ubuntu
+
 - Ubuntu 22.04 Server 安裝與配置
 - 基礎 Linux 指令操作
 - 實作練習與故障排除
 
+[Install Ubuntu Server](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview)  
+[OpenSSH Server](https://documentation.ubuntu.com/server/how-to/security/openssh-server/)
+
 ### 3. 容器技術基礎 - Docker (1小時)
+
+docker
 
 - Docker 架構介紹
 - Docker 安裝與配置
 - Docker 容器管理
 - 實作練習與故障排除
 
+[Install Docker Engine](https://docs.docker.com/engine/install/ubuntu/)  
+[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
+
 ### 4. Windows Subsystem for Linux (1小時)
+
+wsl
 
 - WSL 2 架構介紹
 - WSL 安裝與配置
 - WSL 實例管理
 - 實作練習與故障排除
+
+[How to install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)  
+[Advanced settings configuration in WSL](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)  
+[Accessing network applications with WSL](https://learn.microsoft.com/en-us/windows/wsl/networking)
 
 ### 5. 開發工具配置 (30分鐘)
 
@@ -39,6 +55,10 @@ vscode
   - WSL 開發環境
   - Docker 容器開發
 - Git 與 GitHub 基礎操作
+
+[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  
+[VS Code Remote Development](https://code.visualstudio.com/docs/remote/remote-overview)  
+[Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 ## 第二部分：專案文件與版本控制 (1小時)
 
@@ -57,13 +77,10 @@ github actions ci/cd
 
 ### 7. Yocto 客製化 Linux 系統 (7.5小時)
 
-tar
-unzip
-diff
-patch
+linux command
+docker
 
 vscode
-docker
 balenaEtcher
 
 - Yocto 開發環境建置 (45分鐘)
@@ -79,6 +96,8 @@ balenaEtcher
 
 ### 8. 多媒體應用開發 - GStreamer (4小時)
 
+yocto
+
 - 開發環境建置 (1小時)
 - GStreamer 插件開發 (30分鐘)
 - RZ/G2L 開發板配置 (30分鐘)
@@ -89,11 +108,16 @@ balenaEtcher
 
 ### 9. 使用者介面開發 - Qt (3小時)
 
+yocto
+
 - Qt 開發環境建置 (1小時)
 - Qt 程式開發 (1小時)
 - RZ/G2L Qt 程式開發 (1小時)
 
 ### 10. 硬體控制開發 - GPIO (3小時)
+
+qt
+yocto
 
 - 開發環境準備 (1小時)
 - Qt GPIO 程式開發 (1小時)
