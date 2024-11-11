@@ -25,7 +25,7 @@
 
 - Ubuntu Server 安裝與配置
 - 基礎 Linux 指令操作
-- 實作練習與問題解決
+- 實作練習與問題排除
 
 ##### Ubuntu 相關資源
 
@@ -39,9 +39,9 @@
 ##### Docker 基礎架構
 
 - Docker 架構介紹
-- Docker Engine 安裝與配置
-- Docker 容器管理實務
-- 實作練習與問題解決
+- Docker 安裝與配置
+- Docker 容器管理
+- 實作練習與問題排除
 
 ##### Docker 參考資源
 
@@ -54,9 +54,9 @@
 ##### WSL 系統設定
 
 - WSL 2 架構介紹
-- WSL 安裝與配置步驟
-- WSL 實例管理方法
-- 實作練習與問題解決
+- WSL 安裝與配置
+- WSL 實例管理
+- 實作練習與問題排除
 
 ##### WSL 技術資源
 
@@ -109,13 +109,15 @@
 - Yocto 開發環境建置
   - Docker 容器環境配置
   - 相關工具安裝與設定
-- Yocto 系統配置
-  - 專案初始化設定
-  - 系統配置檔案管理
+- Yocto 系統客製化
+  - 加入所需的 meta 層級
+  - 配方檔案（recipe）修改
+  - 系統組態檔案調整
 - 系統建置與部署
-  - 客製化 Linux 映像檔建置
-  - SD 卡燒錄程序
-  - 系統啟動與測試驗證
+  - BitBake 建置流程說明
+  - 客製化 Linux 映像檔產生
+  - SD 卡燒錄與系統啟動
+  - 開發板功能驗證
 
 ##### Yocto 開發資源
 
@@ -126,18 +128,31 @@
 - [Renesas 技術維基](https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki)
 - [balenaEtcher 燒錄工具](https://etcher.balena.io/)
 
-#### 多媒體系統開發
+#### GStreamer 應用實務
 
-##### GStreamer 框架應用
+##### GStreamer 基礎概念
 
-- 開發環境建置
-- GStreamer 插件開發
-- RZ/G2L 開發板配置
-  - Yocto 配方修改與客製化
-- 應用開發實務
-  - Pipeline 設計與實作
-  - 效能最佳化技巧
-  - 除錯與問題排除
+- 架構介紹
+- 常用指令與工具操作
+- Pipeline 設計原則
+
+##### 跨平台開發與效能比較
+
+- PC 端開發
+  - GStreamer 開發套件安裝與設定
+  - Pipeline 實作與測試
+
+- RZ/G2L 開發板整合
+  - Yocto 配方修改
+  - 重新建置系統映像檔
+  - SD 卡寫入與開發板啟動
+  - Pipeline 實作與測試
+
+- 效能分析與最佳化
+  - 效能數據收集方法
+  - PC 與 RZ/G2L 效能對比
+  - 系統資源使用分析
+  - 效能調校建議
 
 ##### GStreamer 技術資源
 
