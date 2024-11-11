@@ -6,10 +6,12 @@ sidebar_position: 1
 
 | Week#       | Content     |
 | ----------- | ----------- |
-| #1 ( 11/18 - 11/22 ) | MOIL Introduction </br> 0. Linux basics |
+| #1 ( 11/18 - 11/22 ) | MOIL Introduction |
+|  | Linux basics |
 | #2 ( 11/25 - 11/29 ) | 1. Yocto Project |
 | #3 ( 12/02 - 12/06 ) | 2. GStreamer |
-| #4 ( 12/09 - 12/11 ) | 3. Qt </br> 4. Discussion |
+| #4 ( 12/09 - 12/11 ) | 3. Qt |
+|  | 4. Discussion |
 
 ## 第一部分：基礎環境建置
 
