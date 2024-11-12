@@ -111,24 +111,26 @@ sidebar_position: 1
 ##### Development environment preparation steps
 
 - Yocto development environment setup
-- Docker container environment configuration
-- Installation and settings of related tools
+  - Docker container environment configuration
+  - Installation and settings of related tools
+
 - Yocto system customization
-- Add the required meta levels
--Recipe file modification
-- System configuration file adjustment
+  - Add the required meta levels
+  - Recipe file modification
+  - System configuration file adjustment
+
 - System construction and deployment
-- BitBake build process instructions
-- Customized Linux image file generation
-- SD card burning and system startup
-- Development board function verification
+  - BitBake build process instructions
+  - Customized Linux image file generation
+  - SD card burning and system startup
+  - Development board function verification
 
 ##### Yocto Development Resources
 
 - [Yocto Project Quick Setup Guide](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 - [RZ/G2L Development Kit Description](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evkit-evaluation-board-kit-rzg2l-mpu)
 - [RZ/G2L Evaluation Board Quick Start Guide](https://www.renesas.com/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686)
-- [RZ/G Linux Verification Kit](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-linux-platform/rzg-marketplace/verified-linux-package/rzg- verified-linux-package)
+- [RZ/G Linux Verification Kit](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-linux-platform/rzg-marketplace/verified-linux-package/rzg-verified-linux-package)
 - [Renesas Technology Wiki](https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki)
 - [balenaEtcher burning tool](https://etcher.balena.io/)
 
@@ -143,20 +145,20 @@ sidebar_position: 1
 ##### Cross-platform development and performance comparison
 
 - PC development
-- GStreamer Development Kit Installation and Settings
-- Pipeline implementation and testing
+  - GStreamer Development Kit Installation and Settings
+  - Pipeline implementation and testing
 
 - RZ/G2L development board integration
-- Yocto recipe modification
-- Rebuild system image file
-- SD card writing and development board startup
-- Pipeline implementation and testing
+  - Yocto recipe modification
+  - Rebuild system image file
+  - SD card writing and development board startup
+  - Pipeline implementation and testing
 
 - Performance analysis and optimization
-- Performance data collection methods
-- Performance comparison between PC and RZ/G2L
-- System resource usage analysis
-- Performance tuning suggestions
+  - Performance data collection methods
+  - Performance comparison between PC and RZ/G2L
+  - System resource usage analysis
+  - Performance tuning suggestions
 
 ##### GStreamer technical resources
 
@@ -194,12 +196,13 @@ sidebar_position: 1
 ### Necessary skills background
 
 - Basics of programming languages
-- C/C++ programming basics
-- Python programming basics
+  - C/C++ programming basics
+  - Python programming basics
+
 - Linux system operating experience
-- Basic command operations
-- File system management
-- Permission setting concept
+  - Basic command operations
+  - File system management
+  - Permission setting concept
 
 ### Course Evaluation Items
 
