@@ -28,7 +28,7 @@ tar -xzvf mediamtx_v1.9.3_linux_arm64v8.tar.gz
 
 Install the GStreamer
 
-[Link](../gstreamer2/platform-setup/x86-platform.md)
+[Link](../2024/gstreamer2/platform-setup/x86-platform.md)
 
 edit the `mediamtx.yml` file
 
