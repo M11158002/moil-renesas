@@ -234,7 +234,7 @@ sidebar_position: 1
 
 - Hardware control program
 - Test verification report
-- technical documents
+- Technical documents
 
 #### 6. Technical Documentation Project
 
