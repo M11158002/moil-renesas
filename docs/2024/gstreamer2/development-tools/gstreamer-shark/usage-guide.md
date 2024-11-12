@@ -26,3 +26,4 @@ Run the GStreamer Pipeline
 ```bash
 gst-launch-1.0 videotestsrc ! autovideosink
 ```
+![](image/result_autosink.png)

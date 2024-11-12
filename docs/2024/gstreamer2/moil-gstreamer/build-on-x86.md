@@ -107,7 +107,7 @@ Check the plugin
 gst-inspect-1.0 geometrictransform
 gst-inspect-1.0 equirectangular
 ```
-
+![](./image/result_geometrictransform.png)
 ## 3.1.4 Run the Example Pipeline
 
 go to the test_env directory
