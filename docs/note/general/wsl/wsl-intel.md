@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # WSL Intel Graphics
 
+[Configure WSL 2 for GPU Workflows](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2025-0/configure-wsl-2-for-gpu-workflows.html)
+
 ```bash
 sudo apt install -y gpg-agent wget
 ```
@@ -52,10 +54,11 @@ sudo apt install vainfo
 ```
 
 ```bash
-vainfo
+export LIBVA_DRIVER_NAME=d3d12
+export MESA_D3D12_DEFAULT_ADAPTER_NAME=Intel
+export MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA
 ```
 
 ```bash
-export MESA_D3D12_DEFAULT_ADAPTER_NAME=INTEL
-export MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA
+vainfo --display drm --device /dev/dri/card0
 ```
