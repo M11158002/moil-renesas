@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Test
+# RZ/G2L-EVKIT Yocto Configuration
 
 ```conf
 DL_DIR = "${TOPDIR}/../downloads"
