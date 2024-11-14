@@ -22,6 +22,12 @@ SSH Server
 EXTRA_IMAGE_FEATURES_append = " ssh-server-openssh "
 ```
 
+Graphviz
+
+```bash
+IMAGE_INSTALL_append = " graphviz "
+```
+
 GStreamer Instruments
 
 ```bash
