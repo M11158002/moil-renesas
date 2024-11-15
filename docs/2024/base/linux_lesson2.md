@@ -1,4 +1,4 @@
-# **Linux: Second Lesson - File Manipulation, Searching, and Text Processing**
+# Linux: Second Lesson - File Manipulation, Searching, and Text Processing**
 
 ## **1. Review of First Lesson**
 

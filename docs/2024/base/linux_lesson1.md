@@ -1,4 +1,4 @@
-# **Introduction to Linux: First Lesson Guide**
+# Introduction to Linux: First Lesson Guide
 
 ## **1. What is Linux?**
 
