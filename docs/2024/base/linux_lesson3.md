@@ -1,4 +1,4 @@
-# Linux: Third Lesson - Managing Processes, File Compression, and Shell Scripting**
+# Linux: Third Lesson - Managing Processes, File Compression, and Shell Scripting
 
 ## **1. Review of Previous Lessons**
 
