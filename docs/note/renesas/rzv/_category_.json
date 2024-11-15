@@ -1,6 +1,6 @@
 {
-  "label": "Renesas",
-  "position": 2,
+  "label": "RZ/V",
+  "position": 3,
   "link": {
     "type": "generated-index"
   }
