@@ -1,4 +1,4 @@
-### Linux Basics Tutorial
+## Linux Basics Tutorial
 
 Linux is an open-source operating system widely used for servers, desktops, and embedded devices. It’s popular among developers and system administrators due to its open-source nature and high customizability. If you're a beginner, this guide will help you get started with some essential concepts and commands in Linux.
 
