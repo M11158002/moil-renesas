@@ -42,26 +42,7 @@ Learning some common Linux commands is essential for using the system effectivel
 - **`tail <file>`**: Displays the last few lines of a file.
 - **`grep <pattern> <file>`**: Searches for a pattern (string) in a file.
 
-#### 2.3 **File Permissions and Ownership**
-In Linux, every file and directory has a set of permissions that control who can read, write, or execute it. Use the `ls -l` command to view file permissions.
-
-- **`chmod <permissions> <file>`**: Changes file permissions. Example:
-  - `chmod 755 <file>`: Sets the file's permissions to `rwxr-xr-x`.
-  - `chmod u+x <file>`: Adds execute permission for the owner.
-- **`chown <user>:<group> <file>`**: Changes the owner and group of a file. Example: `chown john:admin file.txt`.
-- **`chgrp <group> <file>`**: Changes the group of a file.
-
-#### 2.4 **Process Management**
-In Linux, processes are running programs. Here are some commands to manage processes:
-
-- **`ps`**: Displays a list of running processes.
-  - `ps aux`: Shows detailed information about all processes.
-- **`top`**: Displays real-time system resource usage, including CPU and memory.
-- **`kill <PID>`**: Terminates a process by its Process ID (PID).
-  - `kill -9 <PID>`: Forcefully kills a process.
-- **`nohup <command> &`**: Runs a command in the background, preventing it from being terminated when you log out.
-
-#### 2.5 **Package Management**
+#### 2.3 **Package Management**
 In Linux, software is often managed through package managers, which vary by distribution. Common package managers are `apt` (Ubuntu/Debian), `yum` (CentOS/RHEL), and `dnf` (Fedora).
 
 - **Ubuntu/Debian** (APT):
@@ -69,10 +50,6 @@ In Linux, software is often managed through package managers, which vary by dist
   - `sudo apt upgrade`: Upgrades installed packages.
   - `sudo apt install <package>`: Installs a package.
   - `sudo apt remove <package>`: Removes a package.
-- **CentOS/RHEL** (YUM):
-  - `sudo yum update`: Updates packages.
-  - `sudo yum install <package>`: Installs a package.
-  - `sudo yum remove <package>`: Removes a package.
 
 ### 3. **Common Linux Operations**
 
@@ -107,11 +84,6 @@ To search for the `my_project` folder in the `/home` directory:
 find /home -name "my_project"
 ```
 
-#### 3.5 Change File Permissions
-To change the permissions of `hello.txt` so it's readable and writable:
-```bash
-chmod 644 hello.txt
-```
 
 ### 4. **Text Editors in Linux**
 Linux offers several text editors for editing files:
