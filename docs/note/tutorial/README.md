@@ -7,6 +7,7 @@ sidebar_position: 0
 1. ubuntu desktop tutorials
     1. [install ubuntu desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
     2. [mirror ubuntu download](https://mirror.twds.com.tw/ubuntu-releases/)
+    3. [OpenSSH server](https://documentation.ubuntu.com/server/how-to/security/openssh-server/)
 2. docker tutorials
     1. [install docker engine part1](https://docs.docker.com/engine/install/ubuntu/)
     2. [install docker engine part2](https://docs.docker.com/engine/install/linux-postinstall/)
