@@ -62,22 +62,28 @@ Basic pipeline
 gst-launch-1.0 udpsrc port=5000 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink
 ```
 
+VA-API hardware acceleration pipeline
+
+```bash
+gst-launch-1.0 udpsrc port=5000 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! vaapih264dec ! vaapipostproc ! autovideosink
+```
+
+OpenMAX hardware acceleration pipeline
+
+```bash
+gst-launch-1.0 udpsrc port=5000 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! autovideosink
+```
+
 change buffer-size
 
 ```bash
 gst-launch-1.0 udpsrc port=5000 buffer-size=1048576 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink
 ```
 
-VA-API hardware acceleration pipeline
+udp multicast pipeline
 
 ```bash
-gst-launch-1.0 udpsrc port=5000 buffer-size=1048576 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! vaapih264dec ! vaapipostproc ! autovideosink
-```
-
-OpenMAX hardware acceleration pipeline
-
-```bash
-gst-launch-1.0 udpsrc port=5000 buffer-size=1048576 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! autovideosink
+gst-launch-1.0 udpsrc address=224.1.1.1 port=5000 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink
 ```
 
 Note:
@@ -130,6 +136,12 @@ OpenMAX hardware acceleration pipeline
 
 ```bash
 gst-launch-1.0 videotestsrc ! videoconvert ! omxh264enc ! h264parse ! rtph264pay ! udpsink host=<ip address> port=5000
+```
+
+udp multicast pipeline
+
+```bash
+gst-launch-1.0 videotestsrc ! videoconvert ! x264enc ! h264parse ! rtph264pay ! host=224.1.1.1 port=5000
 ```
 
 ## v4l2 Elements
