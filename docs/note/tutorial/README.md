@@ -8,11 +8,11 @@ sidebar_position: 0
     1. [install ubuntu desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
     2. [mirror ubuntu download](https://mirror.twds.com.tw/ubuntu-releases/)
     3. [OpenSSH server](https://documentation.ubuntu.com/server/how-to/security/openssh-server/)
-    4. [Note](../general/openssh-server.md)
+    4. [Note](../general/openssh.md)
 2. docker tutorials
     1. [install docker engine part1](https://docs.docker.com/engine/install/ubuntu/)
     2. [install docker engine part2](https://docs.docker.com/engine/install/linux-postinstall/)
-    3. [docker cheat sheet ](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
+    3. [docker cheat sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
     4. [Note](../general/docker.md)
 3. vscode tutorials
     1. [install vscode](https://code.visualstudio.com/download)
