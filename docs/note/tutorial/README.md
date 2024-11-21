@@ -19,7 +19,6 @@ sidebar_position: 0
     2. [source control](https://code.visualstudio.com/docs/sourcecontrol/overview)
     3. [Remote](https://code.visualstudio.com/docs/remote/remote-overview)
     4. [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
-
 4. git Tutorials
     1. [Install git](https://git-scm.com/downloads)
     2. [Install git-lfs](https://github.com/git-lfs/git-lfs?utm_source=gitlfs_site&utm_medium=installation_link&utm_campaign=gitlfs#installing)
