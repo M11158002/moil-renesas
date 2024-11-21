@@ -48,3 +48,15 @@ can also add comment to the key
 ```bash
 ssh-keygen -t ed25519 -C "renesas-ssh-key"
 ```
+
+Connect to the server using ssh
+
+```bash
+ssh <username>@<server-ip>
+```
+
+Note: Check the server ip address using `ip a`
+
+```bash
+ip a
+```
