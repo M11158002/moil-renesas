@@ -125,3 +125,25 @@ MACHINE=rzv2h-evk-ver1 bitbake core-image-weston -c populate_sdk
 ```bash
 bitbake-layers add-layer ../meta-qt5
 ```
+
+## New
+
+```bash
+patch --dry-run -p1 < 0001-gstreamer-moil-plugin.patch
+patch --dry-run -p1 < 0002-fix_qtsmarthome_url.patch
+```
+
+```bash
+checking file meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend
+Hunk #2 succeeded at 19 with fuzz 2 (offset 3 lines).
+```
+
+```bash
+patch -p1 < 0001-gstreamer-moil-plugin.patch
+patch -p1 < 0002-fix_qtsmarthome_url.patch
+```
+
+```bash
+patching file meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend
+Hunk #2 succeeded at 19 with fuzz 2 (offset 3 lines).
+```
