@@ -35,7 +35,7 @@ Restart the ssh service to pick up configuration changes:
 sudo systemctl try-reload-or-restart ssh
 ```
 
-import ssh key from github
+`import` ssh key from github
 
 ```bash
 ssh-import-id-gh <github-username>
