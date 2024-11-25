@@ -6,8 +6,8 @@ sidebar_position: 2
 
 ## Install Docker Engine
 
-[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
+[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)  
+[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)  
 
 ```bash title="Add Docker's official GPG key:"
 sudo apt update

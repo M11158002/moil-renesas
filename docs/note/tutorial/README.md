@@ -8,18 +8,17 @@ sidebar_position: 0
     1. [install ubuntu desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
     2. [mirror ubuntu download](https://mirror.twds.com.tw/ubuntu-releases/)
     3. [OpenSSH server](https://documentation.ubuntu.com/server/how-to/security/openssh-server/)
-    4. [Note](../general/openssh-server.md)
+    4. [Note](../general/openssh.md)
 2. docker tutorials
     1. [install docker engine part1](https://docs.docker.com/engine/install/ubuntu/)
     2. [install docker engine part2](https://docs.docker.com/engine/install/linux-postinstall/)
-    3. [docker cheat sheet ](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
+    3. [docker cheat sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
     4. [Note](../general/docker.md)
 3. vscode tutorials
     1. [install vscode](https://code.visualstudio.com/download)
     2. [source control](https://code.visualstudio.com/docs/sourcecontrol/overview)
     3. [Remote](https://code.visualstudio.com/docs/remote/remote-overview)
     4. [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
-
 4. git Tutorials
     1. [Install git](https://git-scm.com/downloads)
     2. [Install git-lfs](https://github.com/git-lfs/git-lfs?utm_source=gitlfs_site&utm_medium=installation_link&utm_campaign=gitlfs#installing)

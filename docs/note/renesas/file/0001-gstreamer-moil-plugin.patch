@@ -1,0 +1,20 @@
+--- a/meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend	2024-11-22 11:24:34.237237108 +0800
++++ b/meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend	2024-11-22 11:28:37.011836733 +0800
+@@ -3,7 +3,7 @@
+ SRC_URI_remove = "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-${PV}.tar.xz"
+ 
+ SRC_URI_append = " \
+-    gitsm://github.com/renesas-rcar/gst-plugins-bad.git;branch=RCAR-GEN3e/1.16.3;name=base \
++    gitsm://github.com/yourskc/gst-plugins-bad.git;branch=RCAR-GEN3e/1.16.3;name=base \
+     file://0001_fix_waylandsink_fullscreen.patch \
+     file://0002-waylandsink-Add-set-window-position.patch \
+     file://0003-waylandsink-Add-property-out-w-out-h-to-display-expe.patch \
+@@ -16,7 +16,7 @@
+     file://0007-gstreamer-waylandsink-Add-stride-restriction-to-buff.patch \
+ "
+ 
+-SRCREV_base = "3ef17d3c57e12f9d7536e464656b871a8949fa5b"
++SRCREV_base = "28ea2e113580be9d73d798ba58b82aa3ec62b92c"
+ 
+ DEPENDS += "weston"
+ 
