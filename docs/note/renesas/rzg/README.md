@@ -128,6 +128,9 @@ bitbake-layers add-layer ../meta-qt5
 
 ## New
 
+[Download 0001](../file/0001-gstreamer-moil-plugin.patch)
+[Download 0002](../file/0002-fix_qtsmarthome_url.patch)
+
 ```bash
 patch --dry-run -p1 < 0001-gstreamer-moil-plugin.patch
 patch --dry-run -p1 < 0002-fix_qtsmarthome_url.patch
