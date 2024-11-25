@@ -117,7 +117,12 @@ MACHINE=smarc-rzg2l bitbake core-image-weston
 Run the following command to build cross compiler installer.
 
 ```bash
-MACHINE=rzv2h-evk-ver1 bitbake core-image-weston -c populate_sdk
+MACHINE=smarc-rzg2l bitbake core-image-weston -c populate_sdk
+```
+
+```bash
+MACHINE=smarc-rzg2l bitbake core-image-qt
+MACHINE=smarc-rzg2l bitbake core-image-qt -c populate_sdk
 ```
 
 ## Links
@@ -149,4 +154,19 @@ patch -p1 < 0002-fix_qtsmarthome_url.patch
 ```bash
 patching file meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend
 Hunk #2 succeeded at 19 with fuzz 2 (offset 3 lines).
+```
+
+
+## Note
+
+```bash
+sudo fdisk -l /dev/sdb
+```
+
+```bash
+sudo growpart /dev/sdb 2
+```
+
+```bash
+sudo resize2fs /dev/sdb2
 ```
