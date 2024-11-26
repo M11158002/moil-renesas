@@ -54,10 +54,15 @@ Download the patch files.
 [Download 0001](../file/0001-gstreamer-moil-plugin.patch)  
 [Download 0002](../file/0002-fix_qtsmarthome_url.patch)  
 
-Apply a patch file.
+Apply a patch file to add the GStreamer Moil Plugin.
 
 ```bash
 patch -p1 < 0001-gstreamer-moil-plugin.patch
+```
+
+Apply a patch file to fix the Qt Smart Home URL.
+
+```bash
 patch -p1 < 0002-fix_qtsmarthome_url.patch
 ```
 
