@@ -4,6 +4,17 @@ sidebar_position: 0
 
 # README
 
+Renesas VLP 需要在 Ubuntu 20.04 LTS 系統的環境下建置。  
+如果系統不是 Ubuntu 20.04 LTS ，可以使用 Docker Containers ，進行 Renesas VLP 的建置。  
+如果使用 vscode 進行開發，可以使用 Dev Containers 自動管理 Docker Containers。  
+
+使用 Docker Containers 建置:
+[docker](../general/docker/docker.md)  
+使用 VScode Dev Containers 建置:
+[vscode](../general/docker/vscode.md)  
+
+## 下載 Renesas VLP Package
+
 Download the RZ/G Verified Linux Package zip file.
 
 Extract RZ/G Verified Linux Package zip file.
