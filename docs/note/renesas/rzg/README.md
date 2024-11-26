@@ -15,7 +15,8 @@ Renesas VLP 需要在 Ubuntu 20.04 LTS 系統的環境下建置。
 
 ## 下載 Renesas VLP Package
 
-Download the RZ/G Verified Linux Package zip file.
+Download Link:
+[RZ/G Verified Linux Package](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-linux-platform/rzg-marketplace/verified-linux-package/rzg-verified-linux-package)
 
 Extract RZ/G Verified Linux Package zip file.
 
@@ -23,9 +24,13 @@ Extract RZ/G Verified Linux Package zip file.
 unzip RTK0EF0045Z0021AZJ-v3.0.6-update3.zip
 ```
 
+Extract RZ MPU Graphics Library zip file.
+
 ```bash
 unzip RTK0EF0045Z13001ZJ-v1.2.2_EN.zip
 ```
+
+Extract RZ MPU Video Codec Library zip file.
 
 ```bash
 unzip RTK0EF0045Z15001ZJ-v1.2.2_EN.zip
