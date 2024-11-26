@@ -137,7 +137,7 @@ cd ..
 Initialize a build using the oe-init-build-env script in Poky and set environment variable TEMPLATECONF to the below path.
 
 ```bash title="dir: ~/work/rzg/yocto"
-TEMPLATECONF=$PWD/meta-renesas/meta-rzg2l/docs/template/conf/ source poky/oe-init-build-env build
+TEMPLATECONF=${PWD}/meta-renesas/meta-rzg2l/docs/template/conf/ source poky/oe-init-build-env build
 ```
 
 Run the following commands to add necessary layers for AI application to build/conf/bblayers.conf (configration file for layers).
