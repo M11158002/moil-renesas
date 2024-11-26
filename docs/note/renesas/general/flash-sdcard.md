@@ -19,7 +19,7 @@ Wire the SD card to the host PC.
 sudo bmaptool copy core-image-<target>-<borad>.wic.gz /dev/sdx
 ```
 
-如果需要增加 rootfs image 的大小，可以參考以下步驟。
+if you want to resize the sd card partition, follow the steps below.
 
 Check the sd card partition.
 
