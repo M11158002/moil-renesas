@@ -4,7 +4,19 @@ sidebar_position: 0
 
 # README
 
-Download the RZ/G Verified Linux Package zip file.
+Renesas VLP 需要在 Ubuntu 20.04 LTS 系統的環境下建置。  
+如果系統不是 Ubuntu 20.04 LTS ，可以使用 Docker Containers ，進行 Renesas VLP 的建置。  
+如果使用 vscode 進行開發，可以使用 Dev Containers 自動管理 Docker Containers。  
+
+使用 Docker Containers 建置:
+[docker](../general/docker/docker.md)  
+使用 VScode Dev Containers 建置:
+[vscode](../general/docker/vscode.md)  
+
+## 下載 Renesas VLP Package
+
+Download Link:
+[RZ/G Verified Linux Package](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-linux-platform/rzg-marketplace/verified-linux-package/rzg-verified-linux-package)
 
 Extract RZ/G Verified Linux Package zip file.
 
@@ -12,9 +24,13 @@ Extract RZ/G Verified Linux Package zip file.
 unzip RTK0EF0045Z0021AZJ-v3.0.6-update3.zip
 ```
 
+Extract RZ MPU Graphics Library zip file.
+
 ```bash
 unzip RTK0EF0045Z13001ZJ-v1.2.2_EN.zip
 ```
+
+Extract RZ MPU Video Codec Library zip file.
 
 ```bash
 unzip RTK0EF0045Z15001ZJ-v1.2.2_EN.zip
@@ -95,6 +111,23 @@ Move to the working directory.
 cd ..
 ```
 
+Download the patch files.
+
+[Download 0001](../file/0001-gstreamer-moil-plugin.patch)  
+[Download 0002](../file/0002-fix_qtsmarthome_url.patch)  
+
+Apply a patch file to add the GStreamer Moil Plugin.
+
+```bash
+patch -p1 < 0001-gstreamer-moil-plugin.patch
+```
+
+Apply a patch file to fix the Qt Smart Home URL.
+
+```bash
+patch -p1 < 0002-fix_qtsmarthome_url.patch
+```
+
 Initialize a build using the oe-init-build-env script in Poky and set environment variable TEMPLATECONF to the below path.
 
 ```bash
@@ -108,7 +141,7 @@ bitbake-layers add-layer ../meta-rz-features/meta-rz-graphics
 bitbake-layers add-layer ../meta-rz-features/meta-rz-codecs
 ```
 
-Run the following command to build the Linux kernel files.
+Run the following command to build the weston image.
 
 ```bash
 MACHINE=smarc-rzg2l bitbake core-image-weston
@@ -120,44 +153,35 @@ Run the following command to build cross compiler installer.
 MACHINE=smarc-rzg2l bitbake core-image-weston -c populate_sdk
 ```
 
-```bash
-MACHINE=smarc-rzg2l bitbake core-image-qt
-MACHINE=smarc-rzg2l bitbake core-image-qt -c populate_sdk
-```
-
-## Links
+If you want to build the qt5 image, run the following command to add the meta-qt5 layer for qt5.
 
 ```bash
 bitbake-layers add-layer ../meta-qt5
 ```
 
-## New
-
-[Download 0001](../file/0001-gstreamer-moil-plugin.patch)
-[Download 0002](../file/0002-fix_qtsmarthome_url.patch)
+and in local.conf file, add the following line.
 
 ```bash
-patch --dry-run -p1 < 0001-gstreamer-moil-plugin.patch
-patch --dry-run -p1 < 0002-fix_qtsmarthome_url.patch
+QT_DEMO = "1"
 ```
+
+Run the following command to build the qt5 image.
 
 ```bash
-checking file meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend
-Hunk #2 succeeded at 19 with fuzz 2 (offset 3 lines).
+MACHINE=smarc-rzg2l bitbake core-image-qt
 ```
+
+Run the following command to build cross compiler installer.
 
 ```bash
-patch -p1 < 0001-gstreamer-moil-plugin.patch
-patch -p1 < 0002-fix_qtsmarthome_url.patch
+MACHINE=smarc-rzg2l bitbake core-image-qt -c populate_sdk
 ```
+
+If you want resize sd card partition, run the following command.
 
 ```bash
-patching file meta-renesas/meta-rz-common/recipes-multimedia/gstreamer/gstreamer1.0-plugins-bad_1.16.3.bbappend
-Hunk #2 succeeded at 19 with fuzz 2 (offset 3 lines).
+lsblk
 ```
-
-
-## Note
 
 ```bash
 sudo fdisk -l /dev/sdb
@@ -170,3 +194,5 @@ sudo growpart /dev/sdb 2
 ```bash
 sudo resize2fs /dev/sdb2
 ```
+
+## Links
