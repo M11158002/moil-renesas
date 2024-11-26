@@ -190,41 +190,7 @@ image name | file name
 core-image-weston | core-image-weston-smarc-rzg2l.wic.gz <br/> core-image-weston-smarc-rzg2l.wic.bmap
 core-image-qt | core-image-qt-smarc-rzg2l.wic.gz <br/> core-image-qt-smarc-rzg2l.wic.bmap
 
-Check the sd card device.
-
-```bash
-lsblk
-```
-
-if the sd card device is /dev/sdb, and sd card is mounted, unmount the sd card.
-
-```bash
-sudo umount /dev/sdb1
-sudo umount /dev/sdb2
-```
-
-Wire the SD card to the host PC.
-
-```bash
-sudo bmaptool copy core-image-weston-smarc-rzg2l.wic.gz /dev/sdb
-```
-
-如果需要增加 rootfs image 的大小，可以參考以下步驟。
-
-```bash
-lsblk
-```
-
-```bash
-sudo fdisk -l /dev/sdb
-```
-
-```bash
-sudo growpart /dev/sdb 2
-```
-
-```bash
-sudo resize2fs /dev/sdb2
-```
+參考 Flash SD Card 步驟，將 image 燒錄到 SD Card。
+[Flash SD Card](../general/flash-sdcard.md)
 
 ## Links
