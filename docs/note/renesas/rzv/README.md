@@ -49,6 +49,18 @@ meta-virtualization
 poky
 ```
 
+Download the patch files.
+
+[Download 0001](../file/0001-gstreamer-moil-plugin.patch)  
+[Download 0002](../file/0002-fix_qtsmarthome_url.patch)  
+
+Apply a patch file.
+
+```bash
+patch -p1 < 0001-gstreamer-moil-plugin.patch
+patch -p1 < 0002-fix_qtsmarthome_url.patch
+```
+
 Initialize a build using the oe-init-build-env script in Poky and set environment variable TEMPLATECONF to the below path.
 
 ```bash
@@ -76,7 +88,7 @@ Apply a patch file to change SD card image size.
 patch -p1 < ../0002-sd-image-size-16gb.patch
 ```
 
-Run the following command to build the Linux kernel files.
+Run the following command to build the weston image.
 
 ```bash
 MACHINE=rzv2h-evk-ver1 bitbake core-image-weston
@@ -86,6 +98,30 @@ Run the following command to build cross compiler installer.
 
 ```bash
 MACHINE=rzv2h-evk-ver1 bitbake core-image-weston -c populate_sdk
+```
+
+If you want to build the qt5 image, run the following command to add the meta-qt5 layer for qt5.
+
+```bash
+bitbake-layers add-layer ../meta-qt5
+```
+
+and in local.conf file, add the following line.
+
+```bash
+QT_DEMO = "1"
+```
+
+Run the following command to build the qt5 image.
+
+```bash
+MACHINE=rzv2h-evk-ver1 bitbake core-image-qt
+```
+
+Run the following command to build cross compiler installer.
+
+```bash
+MACHINE=rzv2h-evk-ver1 bitbake core-image-qt -c populate_sdk
 ```
 
 ## Links
