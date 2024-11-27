@@ -2,12 +2,9 @@
 sidebar_position: 2
 ---
 
-# RZ/G2L-EVKIT Yocto Configuration
+# Yocto Configuration
 
 ```conf
-DL_DIR = "${TOPDIR}/../downloads"
-SSTATE_DIR = "${TOPDIR}/../sstate-cache"
-
 IMAGE_INSTALL_append = " kernel-module-uvcvideo "
 EXTRA_IMAGE_FEATURES_append = " ssh-server-openssh "
 
