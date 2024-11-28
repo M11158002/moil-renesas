@@ -1,5 +1,11 @@
 # Flash SD Card
 
+To write the microSD card image, install bmap-tools on the Linux PC with the following command.
+
+```bash
+sudo apt install bmap-tools
+```
+
 Check the sd card device.
 
 ```bash
