@@ -79,3 +79,25 @@ gst-launch-1.0 videotestsrc num-buffers=1 ! "video/x-raw, formate=BGRA,width=192
 ```bash
 gst-launch-1.0 filesrc location=test.bgra ! videoparse width=1920 height=1080 formate=BGRA ! imagefreeze ! fpsdisplaysink text-overlay=false video-sink=fakevideosink -v
 ```
+
+```bash
+gst-launch-1.0 videotestsrc ! videoconvert ! fpsdisplaysink text-overlay=false video-sink=fakevideosink sync=false -v
+```
+
+```bash
+gst-launch-1.0 multifilesrc location=test.jpg loop=true num-buffers=600 ! jpegdec ! fpsdisplaysink text-overlay=false video-sink=fakevideosink -v
+```
+
+```bash
+gst-launch-1.0 multifilesrc location=test.jpg loop=true num-buffers=600 ! jpegdec ! fpsdisplaysink text-overlay=false video-sink=fakevideosink -v
+```
+
+建立測試用的Raw檔案
+
+BGRA、NV12、I420、YUV2
+
+```bash
+gst-launch-1.0 videotestsrc num-buffers=300 ! video/x-raw,format=NV12,width=1920,height=1080 ! filesink location=test_1080p.nv12
+
+gst-launch-1.0 v4l2src num-buffers=300 ! jpegdec ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! filesink location=camera_1080p.nv12
+```
