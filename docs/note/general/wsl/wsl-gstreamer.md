@@ -46,13 +46,17 @@ gst-launch-1.0 filesrc location=~/wsl_test.h264 ! h264parse ! nvh264dec ! autovi
 ## Development
 
 ```bash
-sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libgstreamer-plugins-bad1.0-dev
+sudo apt install git make cmake meson ninja-build pkg-config build-essential
+```
+
+```bash
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libgstreamer-plugins-bad1.0-dev indent
 ```
 
 ```bash
 mamba create -n gst
 mamba activate gst
-mamba install git make cmake meson ninja
+mamba install git make cmake pkg-config meson ninja
 ```
 
 ```bash
@@ -65,4 +69,30 @@ cd gstreamer
 
 ```bash
 git checkout 1.24.10
+```
+
+```bash
+sudo cp scripts/gst-indent /usr/local/bin/
+```
+
+```bash
+cd subprojects/gst-plugins-bad/tools/ 
+```
+
+```bash
+./gst-project-maker my_project
+```
+
+```bash
+cd gst-my_project
+```
+
+```bash
+meson setup builddir
+meson compile -C builddir
+```
+
+```bash
+BASE_CLASS=basetransform
+./gst-element-maker my_element $BASE_CLASS
 ```
