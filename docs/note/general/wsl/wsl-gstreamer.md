@@ -42,3 +42,27 @@ gst-launch-1.0 filesrc location=~/wsl_test.h264 ! h264parse ! vaapih264dec ! aut
 # NVDIA NVDEC
 gst-launch-1.0 filesrc location=~/wsl_test.h264 ! h264parse ! nvh264dec ! autovideosink
 ```
+
+## Development
+
+```bash
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libgstreamer-plugins-bad1.0-dev
+```
+
+```bash
+mamba create -n gst
+mamba activate gst
+mamba install git make cmake meson ninja
+```
+
+```bash
+git clone https://gitlab.freedesktop.org/gstreamer/gstreamer.git
+```
+
+```bash
+cd gstreamer
+```
+
+```bash
+git checkout 1.24.10
+```
