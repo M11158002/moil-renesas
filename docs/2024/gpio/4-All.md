@@ -3,7 +3,9 @@ sidebar_position: 7
 sidebar_class_name: hidden
 ---
 
-# 4-1 Indroduction
+# 4 GPIO
+
+## 4-1 Indroduction
 
 In this chapter, we will show you how to perform tests and develop program to control the GPIO hardware pins of Renesas RZ/G2L under the Linux environment
 
@@ -24,9 +26,9 @@ RZ/G2L,Five,V2L Group BSP Manual Set (RTK0EF0045Z9000AZJ-v3.0.6.zip) (ZIP)
 
 or directly download by the below link,
 
-<https://www.renesas.com/en/document/mas/rzg2-group-bsp-manual-set?r=1597481>
+[RTK0EF0045Z9006AZJ-v3.0.6.zip](https://www.renesas.com/en/document/mas/rzg2-group-bsp-manual-set?r=1597481)
 
-Decompress the file " RTK0EF0045Z9006AZJ-v3.0.6.zip", find the below GPIO document,
+Decompress the file "RTK0EF0045Z9006AZJ-v3.0.6.zip", find the below GPIO document,
 
 ```text
 r01us0488ej0109-rz-g_GPIO_UME.pdf
@@ -36,7 +38,7 @@ r01us0488ej0109-rz-g_GPIO_UME.pdf
 
 sysfs is a pseudo file system provided by the Linux kernel that exports information about various kernel subsystems, hardware devices, and associated device drivers from the kernel's device model to user space through virtual files. In addition to providing information about various devices and kernel subsystems, exported virtual files are also used for their configuration.
 
-<https://en.wikipedia.org/wiki/Sysfs>
+[Sysfs](https://en.wikipedia.org/wiki/Sysfs)
 
 In Linux, we usually use these 2 simple commands to access files  
 
@@ -56,7 +58,7 @@ echo xxx > filename
 
 Please reference to the document first,
 
-<https://www.kernel.org/doc/Documentation/gpio/sysfs.txt>
+[sysfs.txt](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
 
 The important steps:
 
@@ -176,7 +178,7 @@ https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg
 
 Access GPIO pins through the file system using the sysfs interface.
 
-<https://www.ics.com/blog/how-control-gpio-hardware-c-or-c>
+[how-control-gpio](https://www.ics.com/blog/how-control-gpio-hardware-c-or-c)
 
 Example code :
 
@@ -211,7 +213,7 @@ Be careful not to burn your board!
 
 Check out the example code at Github Repo :
 
-<https://github.com/yourskc/rzgpio.git>
+[rzgpio](https://github.com/yourskc/rzgpio.git)
 
 Please follow the instructions in the README.md to build the project, then copy the output executable to RZ/G2L for testing.  
 
@@ -221,7 +223,7 @@ Please follow the instructions in the README.md to build the project, then copy 
 
 Please reference to the Repository :
 
-<https://github.com/yourskc/q563_rzgpio/>
+[q563_rzgpio](https://github.com/yourskc/q563_rzgpio/)
 
 The most important concept in this project is how to link QML to our C++ class. All of our GPIO control functions through Linux driver are all inside the C++ class.  
 
@@ -233,7 +235,7 @@ If you need to register a C++ class to use from QML, you can declaring your QQml
 
 Reference :  
 
-<https://doc.qt.io/qt-6/qqmlengine.html#qmlRegisterType>
+[qmlRegisterType](https://doc.qt.io/qt-6/qqmlengine.html#qmlRegisterType)
 
 Once this is registered, the type can be used in QML.
 
@@ -304,25 +306,25 @@ PIN#6 = Vcc
 
 Pmods can use either SPI, I2C or UART protocol.
 
-<https://en.wikipedia.org/wiki/Pmod_Interface>
+[Pmod_Interface](https://en.wikipedia.org/wiki/Pmod_Interface)
 
 We will test GPIO pins using PMOD button and PMOD Led small board.
 
 **PMOD Button**:
 
-<https://digilent.com/reference/pmod/pmodbtn/start>
+[pmodbtn](https://digilent.com/reference/pmod/pmodbtn/start)
 
 ![pmodbtn](https://digilent.com/reference/_media/reference/pmod/pmodbtn/pmodbtn-0.png)
 
 **PMOD Led** :
 
-<https://digilent.com/reference/pmod/pmodled/start>
+[pmodled](https://digilent.com/reference/pmod/pmodled/start)
 
 ![pmodled](https://digilent.com/reference/_media/reference/pmod/pmodled/pmodled-0.png)
 
 Clone and build the below Github repository:
 
-<https://github.com/yourskc/q563_rzgpio/>
+[q563_rzgpio](https://github.com/yourskc/q563_rzgpio/)
 
 For the matching to the configurations in our software program, plug the PMOD board
 to Renesas RZ/G2L. Connect the Led board to the lower pins of PMOD0 on Renesas carrier board, and connect the button board to the lower pins of PMOD1.  
