@@ -152,6 +152,12 @@ core-image-qt | core-image-qt-rzv2h-evk-ver1.wic.gz <br/> core-image-qt-rzv2h-ev
 參考 Flash SD Card 步驟，將 image 燒錄到 SD Card。
 [Flash SD Card](../general/flash-sdcard.md)
 
+reopen the yocto environment.
+
+```bash title="dir: ~/work/rzv/yocto"
+source poky/oe-init-build-env build
+```
+
 ## Links
 
 1. [How to build RZ/V2H AI SDK Source Code](https://renesas-rz.github.io/rzv_ai_sdk/5.00/howto_build_aisdk_v2h.html)
