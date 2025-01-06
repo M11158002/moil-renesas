@@ -160,6 +160,8 @@ source poky/oe-init-build-env build
 
 ## Chromium
 
+supported HW codec and the GPU features (RZG2L,RZV2H)
+
 ```bash
 git clone https://github.com/kraj/meta-clang -b dunfell-clang12
 git clone https://github.com/OSSystems/meta-browser.git
