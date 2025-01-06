@@ -158,6 +158,28 @@ reopen the yocto environment.
 source poky/oe-init-build-env build
 ```
 
+## Chromium
+
+```bash
+git clone https://github.com/kraj/meta-clang -b dunfell-clang12
+git clone https://github.com/OSSystems/meta-browser.git
+cd meta-browser
+git checkout f2d5539552b54099893a7339cbb2ab46b42ee754
+```
+
+```bash
+bitbake-layers add-layer ../meta-clang
+bitbake-layers add-layer ../meta-browser/meta-chromium
+bitbake-layers add-layer ../meta-openembedded/meta-networking
+```
+
+```bash
+IMAGE_INSTALL_append = " chromium-ozone-wayland ntp ttf-sazanami-gothic ttf-sazanami-mincho "
+PREFERRED_VERSION_nodejs-native = "14.%"
+DISTRO_FEATURES_append = " h264enc_lib "
+PACKAGECONFIG_pn-chromium-ozone-wayland =" proprietary-codecs "
+```
+
 ## Links
 
 1. [How to build RZ/V2H AI SDK Source Code](https://renesas-rz.github.io/rzv_ai_sdk/5.00/howto_build_aisdk_v2h.html)
