@@ -73,12 +73,6 @@ Apply a patch file to add the GStreamer Moil Plugin.
 patch -p1 < 0001-gstreamer-moil-plugin.patch
 ```
 
-Apply a patch file to fix the Qt Smart Home URL.
-
-```bash title="dir: ~/work/rzv/yocto"
-patch -p1 < 0002-fix_qtsmarthome_url.patch
-```
-
 Initialize a build using the oe-init-build-env script in Poky and set environment variable TEMPLATECONF to the below path.
 
 ```bash title="dir: ~/work/rzv/yocto"
@@ -116,6 +110,21 @@ Run the following command to build cross compiler installer.
 
 ```bash title="dir: ~/work/rzv/yocto/build"
 MACHINE=rzv2h-evk-ver1 bitbake core-image-weston -c populate_sdk
+```
+
+If you want to build the qt5 image, you can use the `git clone` or `copy file` method to get the meta-qt5 layer for qt5.
+
+```bash
+git clone https://github.com/meta-qt5/meta-qt5.git
+cd meta-qt5
+git checkout c1b0c9f546289b1592d7a895640de103723a0305
+git cherry-pick 77b6060cef9337b184100083746c2e35f531be74
+```
+
+If you copy the rz/g meta-qt5 layer to the build directory, you need to apply a patch file to fix the Qt Smart Home URL.
+
+```bash title="dir: ~/work/rzv/yocto"
+patch -p1 < 0002-fix_qtsmarthome_url.patch
 ```
 
 If you want to build the qt5 image, run the following command to add the meta-qt5 layer for qt5.
@@ -180,6 +189,31 @@ IMAGE_INSTALL_append = " chromium-ozone-wayland ntp ttf-sazanami-gothic ttf-saza
 PREFERRED_VERSION_nodejs-native = "14.%"
 DISTRO_FEATURES_append = " h264enc_lib "
 PACKAGECONFIG_pn-chromium-ozone-wayland =" proprietary-codecs "
+```
+
+```bash
+bitbake-layers create-layer ../meta-moil
+```
+
+```bash
+bitbake-layers add-layer ../meta-moil
+```
+
+```bash
+MACHINE=rzv2h-evk-ver1 recipetool create -o uvc-gadget https://git.ideasonboard.org/uvc-gadget.git
+```
+
+```bash
+MACHINE=rzv2h-evk-ver1 bitbake-layers show-appends | grep linux-renesas
+MACHINE=rzv2h-evk-ver1 bitbake -e linux-renesas | grep meta-moil
+```
+
+```bash
+sudo apt update
+sudo apt install meson ninja-build
+pip install meson
+pip install -U meson
+export PATH=$PATH:/home/user/.local/bin
 ```
 
 ## Links

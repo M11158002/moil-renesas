@@ -59,6 +59,10 @@ mv R01_object_detection_deploy_tvm_v2h-v230.so deploy.so
 ```
 
 ```bash
+cd ..
+```
+
+```bash
 scp -r yolov3_onnx root@<RZV2H_IP>:/home/root/R01_object_detection/
 scp object_detection root@<RZV2H_IP>:/home/root/R01_object_detection/
 ```
@@ -69,4 +73,35 @@ chmod +x object_detection
 
 ```bash
 ./object_detection
+```
+
+## Convert ONNX Model to TVM
+
+```python
+img = F.resize(img, 732, Image.BILINEAR)
+img = F.center_crop(img, 640)
+```
+
+```bash
+yolo export model=yolo11n.pt format=onnx opset=12
+```
+
+```bash
+# yolov8n.onnx
+python3 compile_onnx_model_quant.py ../data/models/yolov8n.onnx -o ../data/output/yolov8n_onnx -t $SDK -d $TRANSLATOR -c $QUANTIZER --images ../data/calibrate_sample -v 100 -s 1,3,640,640 -i images
+# yolov8m.onnx
+python3 compile_onnx_model_quant.py ../data/models/yolov8m.onnx -o ../data/output/yolov8m_onnx -t $SDK -d $TRANSLATOR -c $QUANTIZER --images ../data/calibrate_sample -v 100 -s 1,3,640,640 -i images
+
+
+python3 compile_onnx_model_quant.py ../data/models/yolov8n.onnx -o ../data/output/yolov8n_onnx -t $SDK -d $TRANSLATOR -c $QUANTIZER --images $TRANSLATOR/../GettingStarted/tutorials/calibrate_sample/ -v 100 -s 1,3,640,640 -i images
+
+
+```
+
+```bash
+python3 compile_onnx_model_quant.py ../data/models/yolo11n.onnx -o ../data/output2/yolo11n_onnx -t $SDK -d $TRANSLATOR -c $QUANTIZER --images ../data/val2017 -v 100 -s 1,3,640,640 -i images
+```
+
+```bash
+./random_copy.sh ./val2017 ./calibrate_sample
 ```
