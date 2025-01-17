@@ -191,6 +191,8 @@ DISTRO_FEATURES_append = " h264enc_lib "
 PACKAGECONFIG_pn-chromium-ozone-wayland =" proprietary-codecs "
 ```
 
+## meta-moil
+
 ```bash
 bitbake-layers create-layer ../meta-moil
 ```
@@ -199,11 +201,17 @@ bitbake-layers create-layer ../meta-moil
 bitbake-layers add-layer ../meta-moil
 ```
 
+## Note
+
 ```bash
 MACHINE=rzv2h-evk-ver1 recipetool create -o uvc-gadget https://git.ideasonboard.org/uvc-gadget.git
 ```
 
 ```bash
+bitbake-layers show-layers
+bitbake -c cleanall
+bitbake-getvar -r
+
 MACHINE=rzv2h-evk-ver1 bitbake-layers show-appends | grep linux-renesas
 MACHINE=rzv2h-evk-ver1 bitbake -e linux-renesas | grep meta-moil
 ```
