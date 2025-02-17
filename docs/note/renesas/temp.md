@@ -18,6 +18,12 @@ tar czf yocto-rzv.tar.gz \
 ```
 
 ```bash
+v4l2-ctl --list-devices
+v4l2-ctl -d /dev/video0 --info
+v4l2-ctl -d /dev/video0 --list-formats-ext
+```
+
+```bash
 qmake yourproject.pro
 make
 ```
@@ -65,6 +71,30 @@ curl -X POST "http://140.112.12.82/moilmapgen/process.php" \
   -d "imgWidth=640" \
   -d "imgHeight=480" \
   -d "caliRatio=0.5" \
+  -d "P0=0" \
+  -d "P1=0" \
+  -d "P2=-19.386" \
+  -d "P3=34.964" \
+  -d "P4=-15.408" \
+  -d "P5=330.853" \
+  -d "Mode=1" \
+  -d "Alpha=0" \
+  -d "Beta=0" \
+  -d "Zoom=4" \
+  --output MapsXY.zip
+```
+
+```bash
+curl -X POST "http://140.112.12.82/moilmapgen/process.php" \
+  -d "program=1" \
+  -d "senWidth=1.55" \
+  -d "senHeight=1.55" \
+  -d "iCx=632" \
+  -d "iCy=467" \
+  -d "Ratio=1" \
+  -d "imgWidth=1280" \
+  -d "imgHeight=960" \
+  -d "caliRatio=1" \
   -d "P0=0" \
   -d "P1=0" \
   -d "P2=-19.386" \

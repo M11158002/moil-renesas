@@ -84,11 +84,18 @@ img = F.center_crop(img, 640)
 
 ```bash
 docker pull ultralytics/ultralytics:latest-cpu
-docker run -it --rm -v ./data:/workspaces -w /workspaces ultralytics/ultralytics:latest-cpu
+docker run -it --rm --user $(id -u):$(id -g) -v ./yolo:/workspaces -w /workspaces ultralytics/ultralytics:latest-cpu
 ```
 
 ```bash
 yolo export model=yolo11n.pt format=onnx opset=12
+
+yolo export model=yolo11n.pt format=onnx
+yolo export model=yolo11n.pt format=tflite
+
+nms=false
+imgsz=640,320,288,256,224,192,160
+
 ```
 
 ```bash
