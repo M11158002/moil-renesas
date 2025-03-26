@@ -13,6 +13,12 @@ V2H needs to create virtual environment and install `tflite-runtime` and `pillow
 python3 -m venv .venv
 ```
 
+activate the virtual environment
+
+```bash
+source .venv/bin/activate
+```
+
 ```bash
 pip install tflite-runtime pillow
 ```

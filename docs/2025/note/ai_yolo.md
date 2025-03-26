@@ -51,3 +51,21 @@ verify the installation
 ```bash
 yolo predict model=yolo11n.pt source='https://ultralytics.com/images/bus.jpg'
 ```
+
+export the model to tflite
+
+```bash
+yolo export model=yolo11n.pt format=tflite
+```
+
+scale the model to 320x320
+
+```bash
+yolo export model=yolo11n.pt format=tflite imgsz=320
+```
+
+try the half model
+
+```bash
+yolo export model=yolo11n.pt format=tflite half=True
+```
