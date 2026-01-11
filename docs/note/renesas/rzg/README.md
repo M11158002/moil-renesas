@@ -175,6 +175,7 @@ Run the following command to build the qt5 image.
 
 ```bash title="dir: ~/work/rzg/yocto/build"
 MACHINE=smarc-rzg2l bitbake core-image-qt
+MACHINE=smarc-rzg2ul bitbake core-image-qt
 ```
 
 Run the following command to build cross compiler installer.
